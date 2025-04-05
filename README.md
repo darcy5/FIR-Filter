@@ -2,14 +2,14 @@ FIR Filter Design and Verification
 
 🔍 Objective:
 
-The aim of this experiment is to design and verify an 8-tap Finite Impulse Response (FIR) filter using Verilog. The filter operates on fixed-point Q4.12 format (16-bit signed data with 4 integer bits and 12 fractional bits) and uses the following filter coefficients:
+This experiment aims to design and verify an 8-tap Finite Impulse Response (FIR) filter using Verilog. The filter operates on fixed-point Q4.12 format (16-bit signed data with 4 integer bits and 12 fractional bits) and uses the following filter coefficients:
 [-0.0841, -0.0567, 0.1826, 0.4086, 0.4086, 0.1826, -0.0567, -0.0841]
 
 ======================================================================================================================================
 
 ⚙️ FIR Filter Functionality
 
-The FIR filter performs a convolution over 8 previous samples using the given coefficients. 
+Using the given coefficients, the FIR filter performs a convolution over 8 previous samples. 
 On each clock cycle:
 1) It shifts the new input sample into a shift register.
 2) It calculates a dot product between stored samples and coefficients.
@@ -22,11 +22,11 @@ On each clock cycle:
 
 A Verilog testbench is used to verify the FIR filter:
 1) Reads hexadecimal input data from Input_Data.txt.
-2) Converts each input sample to floating-point and stores recent 8 samples.
-3) Computes the golden output using floating-point arithmetic.
+2) Converts each input sample to floating-point and stores the recent 8 samples.
+3) Compute the golden output using floating-point arithmetic.
 4) Feeds the sample to the DUT (Device Under Test).
 5) Waits for one clock cycle (pipeline latency).
-6) Converts DUT output back to float, compares it with the golden output.
+6) Converts DUT output back to float and compares it with the golden output.
 7) Computes and displays the error.
 8) Logs results to Output_Data.txt.
 
