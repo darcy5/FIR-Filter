@@ -1,4 +1,4 @@
-**FIR Filter Design and Verification**
+# **FIR Filter Design and Verification**
 
 🔍 Objective:
 
