@@ -5,8 +5,7 @@ FIR Filter Design and Verification
 This experiment aims to design and verify an 8-tap Finite Impulse Response (FIR) filter using Verilog. The filter operates on fixed-point Q4.12 format (16-bit signed data with 4 integer bits and 12 fractional bits) and uses the following filter coefficients:
 [-0.0841, -0.0567, 0.1826, 0.4086, 0.4086, 0.1826, -0.0567, -0.0841]
 
-======================================================================================================================================
-
+=========================================================
 ⚙️ FIR Filter Functionality
 
 Using the given coefficients, the FIR filter performs a convolution over 8 previous samples. 
@@ -16,8 +15,7 @@ On each clock cycle:
 3) The result is scaled appropriately and output in fixed-point Q4.12 format.
 4) The filter includes a reset input to initialize all internal states.
 
-======================================================================================================================================
-
+=========================================================
 🧪 Testbench Functionality
 
 A Verilog testbench is used to verify the FIR filter:
@@ -30,8 +28,7 @@ A Verilog testbench is used to verify the FIR filter:
 7) Computes and displays the error.
 8) Logs results to Output_Data.txt.
 
-======================================================================================================================================
-
+=========================================================
 🌟 Why Use a Golden Reference?
 
 1) The golden reference is a high-precision floating-point model of the filter implemented in the testbench. It helps:
@@ -39,8 +36,7 @@ A Verilog testbench is used to verify the FIR filter:
 3) Ensure filtering behavior matches the expected theoretical model.
 4) Identify any mismatch or inaccuracy introduced by fixed-point operations.
 
-======================================================================================================================================
-
+=========================================================
 📉 Error Calculation
 
 The error is computed as: error = DUT_output - golden_output
