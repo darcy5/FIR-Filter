@@ -17,14 +17,14 @@ On each clock cycle:
 ## 🧪 **Testbench Functionality**
 
 A Verilog testbench is used to verify the FIR filter:
-1) Reads hexadecimal input data from Input_Data.txt.
+1) Reads hexadecimal input data from *Input_Data.txt*.
 2) Converts each input sample to floating-point and stores the recent 8 samples.
 3) Compute the golden output using floating-point arithmetic.
 4) Feeds the sample to the DUT (Device Under Test).
 5) Waits for one clock cycle (pipeline latency).
 6) Converts DUT output back to float and compares it with the golden output.
 7) Computes and displays the error.
-8) Logs results to Output_Data.txt.
+8) Logs results to *Output_Data.txt*.
 
 ## 🌟 **Why Use a Golden Reference?**
 
