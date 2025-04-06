@@ -1,13 +1,13 @@
 # **FIR Filter Design and Verification**
 
-🔍 Objective:
+## 🔍 **Objective:**
 
 This experiment aims to design and verify an 8-tap Finite Impulse Response (FIR) filter using Verilog. The filter operates on fixed-point Q4.12 format (16-bit signed data with 4 integer bits and 12 fractional bits) and uses the following filter coefficients:
 [-0.0841, -0.0567, 0.1826, 0.4086, 0.4086, 0.1826, -0.0567, -0.0841]
 
 =========================================================
 
-⚙️ **FIR Filter Functionality**
+## ⚙️ **FIR Filter Functionality**
 
 Using the given coefficients, the FIR filter performs a convolution over 8 previous samples. 
 On each clock cycle:
@@ -18,7 +18,7 @@ On each clock cycle:
 
 =========================================================
 
-🧪 **Testbench Functionality**
+## 🧪 **Testbench Functionality**
 
 A Verilog testbench is used to verify the FIR filter:
 1) Reads hexadecimal input data from Input_Data.txt.
@@ -32,7 +32,7 @@ A Verilog testbench is used to verify the FIR filter:
 
 =========================================================
 
-🌟 **Why Use a Golden Reference?**
+## 🌟 **Why Use a Golden Reference?**
 
 1) The golden reference is a high-precision floating-point model of the filter implemented in the testbench. It helps:
 2) Validate the correctness of the fixed-point hardware design.
@@ -41,7 +41,7 @@ A Verilog testbench is used to verify the FIR filter:
 
 =========================================================
 
-📉 **Error Calculation**
+## 📉 **Error Calculation**
 
 The error is computed as: error = DUT_output - golden_output
 
