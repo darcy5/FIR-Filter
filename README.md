@@ -35,7 +35,7 @@ A Verilog testbench is used to verify the FIR filter:
 
 ## 📉 **Error Calculation**
 
-The error is computed as: error = DUT_output - golden_output
+The error is computed as: *error = DUT_output - golden_output*
 
 This helps analyze how closely the hardware matches the software reference. Small errors are expected due to quantization, fixed-point truncation, or rounding, but large errors may indicate design flaws or misconfigurations.
 
